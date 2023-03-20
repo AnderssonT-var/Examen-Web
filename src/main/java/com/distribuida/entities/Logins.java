@@ -24,9 +24,7 @@ import org.springframework.stereotype.Component;
 public class Logins {
 	
 	
-	//id	fecha_ingreso	fecha_salida	tiempo	usuario	clave	id_usuario
-
-	//@NotNull(message =  " * ")
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name = "id")
