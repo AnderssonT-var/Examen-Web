@@ -1,7 +1,7 @@
 <h1 align="center">Proyecto final 4to Matutino</h1>
 <h3 align="center">Proyecto de registro y gestión de eventos</h3>
 
-<h3 align="left">Integrantes:</h3> <h5>Anersson Toapanta, Mishel Calderon, Arlette Espinosa, Pamela Lema, Ismael Manosalvas, Esteban Sanguano</h5>
+<h3 align="left">Integrantes:</h3> <p>Anersson Toapanta, Mishel Calderon, Arlette Espinosa, Pamela Lema, Ismael Manosalvas, Esteban Sanguano</p>
 <p align="left">
 </p>
 
