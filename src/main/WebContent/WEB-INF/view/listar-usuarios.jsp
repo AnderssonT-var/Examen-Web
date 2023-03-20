@@ -21,39 +21,33 @@
         -moz-user-select: none;
         user-select: none;
       }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
-
       .b-example-divider {
         height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
+        background-color: rgba(0, 0, 0, o.1);
         border: solid rgba(0, 0, 0, .15);
         border-width: 1px 0;
         box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
       }
-
       .b-example-vr {
         flex-shrink: 0;
         width: 1.5rem;
         height: 100vh;
       }
-
       .bi {
         vertical-align: -.125em;
         fill: currentColor;
       }
-
       .nav-scroller {
         position: relative;
         z-index: 2;
         height: 2.75rem;
         overflow-y: hidden;
       }
-
       .nav-scroller .nav {
         display: flex;
         flex-wrap: nowrap;
@@ -66,34 +60,16 @@
       }
     </style>
 
-       <!-- Custom styles for this template -->
+      
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/dashboard/">
-    
     <link href="${pageContext.request.contextPath}/resources/css/dashboard.css" rel="stylesheet">
 	<link href="${pageContext.request.contextPath}/resources/css/bootstrap.min.css" rel="stylesheet"/>
-	<link href="${pageContext.request.contextPath}/resources/css/estilos.css" rel="stylesheet"/>
-	<%-- <link href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css" rel="stylesheet"> --%>
-	
+	<link href="${pageContext.request.contextPath}/resources/css/estilos.css" rel="stylesheet"/>	
 	<script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>     	
-	<%-- <script src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script> --%>
-	
-	
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" /> -->
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css" />	
-		
-	<!-- JavaScript -->
 	<script src="${pageContext.request.contextPath}/resources/js/alertify.min.js"></script>
-	
-	<!-- CSS -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/alertify.min.css"/>
-	<!-- Default theme -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/themes/default.min.css"/>
-	<!-- <!-- Semantic UI theme
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
-	Bootstrap theme 
-	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/> -->
-
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -141,7 +117,7 @@
 			  Registro
             </a>
           <li class="nav-item">
-            <a class="nav-link active" href="${pageContext.request.contextPath}/usuarios">
+            <a class="nav-link active" href="${pageContext.request.contextPath}/usuarios/findAll">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
@@ -152,21 +128,12 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/eventos">
+            <a class="nav-link" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
               <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
               <polygon points="12 15 17 21 7 21 12 15"></polygon>
               </svg>
               Eventos
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/eventos/agregar">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
-              <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
-              <polygon points="12 15 17 21 7 21 12 15"></polygon>
-              </svg>
-             Agregar Eventos
             </a>
           </li>
           <li class="nav-item">
@@ -207,24 +174,33 @@
       
 <h1>Usuarios</h1>
 
-	<button><a href="${pageContext.request.contextPath}/usuarios/frmAdd" >Añadir</a></button>
+
+	<form action="findAll" method="get">
+	<input type="search" id="busqueda" name="busqueda" value="${busqueda}">
+	<button type="submit"  class="btn btn-primary">Busqueda</button>	
+	</form>
+	<br>
+	<br>
+	
+	<button><a href="${pageContext.request.contextPath}/usuarios/frmAdd" >AÃ±adir</a></button> 
 	<div class="table-responsive">
-	<table class="table table-striped table-sm">
+	<table id="tabla1">
 	<thead>
 		<tr>
-			<th scope="col">idUsuario</th>
-			<th scope="col">cedula</th>
-			<th scope="col">nombre1</th>
-			<th scope="col">nombre2</th>
-			<th scope="col">apellido1</th>
-			<th scope="col">apellido2</th>
-			<th scope="col">fechaNacimiento</th>
-			<th scope="col">edad</th>
-			<th scope="col">sexo</th>
-			<th scope="col">direccion </th>
-			<th scope="col">telefono</th>
-			<th scope="col">correo</th>
-			<th scope="col">tipo</th>
+			<th data-field="idUsuario" >ID</th>
+			<th data-field="Cedula" >Cedula</th>
+			<th data-field="1er Nombre" >Nombre1</th>
+			 <th data-field="2do Nombre" >Nombre2</th>
+			<th data-field="1er Apellido" >Apellido1</th>
+			 <th data-field="2do Apellido" >Apellido2</th>
+			<th data-field="Fecha de Nacimiento" >Fecha Nacimiento</th>
+			 <th data-field="Edad" >Edad</th>
+			<th data-field="Sexo" >Sexo</th>
+			<th data-field="Direccion">Direccion </th>
+			<th data-field="Telefono" >Telefono</th>
+			 <th data-field="Correo">Correo</th>
+			 <th data-field="Tipo Usuario" >Tipo</th>
+			 <th>Acciones </th>
 		</tr>
 	</thead>
 	<tbody>
@@ -239,24 +215,50 @@
 			<td>${item.apellido1} </td>
 			<td>${item.apellido2} </td>
 			<td>${item.fechaNacimiento}   </td>
-			<td>  ${item.edad} </td>
+			<td>${item.edad} </td>
 			<td>${item.sexo} </td>
 			<td>${item.direccion}</td>
 			<td>${item.telefono}</td>
 			<td>${item.correo}</td>
 			<td>${item.tipo}</td>
-			<td>
-				<button type="button" class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/usuarios/findOne?idUsuario=${item.idUsuario}&opcion=1" >Actualizar</a></button>
-				<button type="button" class="btn btn-outline-danger" class="btn btn-danger"><a href="${pageContext.request.contextPath}/usuarios/findOne?idUsuario=${item.idUsuario}&opcion=2" >Borrar</a></button>
+			<td> 
+			 <div class="container-fluid btn-group" role="group" aria-label="...">	 
+				<button type="button" class="btn btn-success" ><a href="${pageContext.request.contextPath}/usuarios/findOne?idUsuario=${item.idUsuario}&opcion=1" ><svg style="color: white;  text-decoration: none;
+				" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path>
+  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path>
+</svg></a></button>
+				<button type="button" class="btn btn-danger"><a href="${pageContext.request.contextPath}/usuarios/findOne?idUsuario=${item.idUsuario}&opcion=2" ><svg style="color: white;  text-decoration: none; xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+</svg></a></button>
+</div>
 			<td> 
 		</tr>
+		
 		</c:forEach>
 	</tbody>
+	<br>
 	</table>
 	</div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-
-
+  <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
+      <script src="${pageContext.request.contextPath}/resources/js/dashboard.js"></script>
+	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.6.3.min.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js" ></script>
+    <script src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
+    
+     <script>
+	    var $tabla1 = $('#tabla1')
+	
+		  $(function() {
+		    $tabla1.bootstrapTable({
+		      sortReset: true
+		    })
+		    
+		  })
+</script> 
 </body>
 </html>
