@@ -1,6 +1,10 @@
 <h1 align="center">Proyecto final 4to Matutino</h1>
 <h3 align="center">Proyecto de registro y gestión de eventos</h3>
 
+
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=anderssont-var&label=Profile%20views&color=0e75b6&style=flat" alt="anderssont-var" /> </p>
+
+
 <h3 align="left"><strong>Integrantes: </strong></h3> <p>Anersson Toapanta, Mishel Calderon, Arlette Espinosa, Pamela Lema, Ismael Manosalvas, Esteban Sanguano</p>
 <h3 align="left"><strong>Docente: </strong>Ing.: Diego Maiquez</h3>
 <p align="left">
