@@ -1,7 +1,7 @@
 <h1 align="center"><strong>Proyecto final 4to Matutino</strong></h1>
 <h3 align="center">Proyecto de registro y gestión de eventos</h3>
 
-<h3 align="left"><strong>Integrantes: </strong></h3> <p>Anersson Toapanta, Mishell Calderon, Arlette Espinosa, Pamela Lema, Ismael Manosalvas, Esteban Sanguano</p>
+<h3 align="left"><strong>Integrantes: </strong></h3> <p>Anersson Toapanta, Mishell Calderon, Arlette Espinosa, Pamela Lema, Ismael Manosalvas, Esteban Sanguano.</p>
 <h3 align="left"><strong>Docente: </strong>Ing.: Diego Maiquez</h3>
 <p align="left">
 </p>
