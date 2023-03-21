@@ -234,24 +234,24 @@
 		<div class="form-group" >
                   <label >Nombre<form:errors path="nombre" style="color:red"  /> </label> 
                   <!-- class="form-control is-invalid" -->                
-                  	<form:input path="nombre" type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control" maxlength="20" />                                                    
+                  	<form:input path="nombre" type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control" maxlength="20" required="required"/>                                                    
                 </div>                                
                 <div class="form-group">
                     <label>Fecha de Inicio <form:errors path="fechaInicio" style="color:red" /></label>                  
-                    <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" class="form-control"/>
+                    <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" class="form-control" required="required"/>
                 </div>
                 <div class="form-group">
                     <label>Fecha de Final <form:errors path="fechaFin" style="color:red" /></label>                  
-                    <form:input path="fechaFin"  type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" class="form-control"/>
+                    <form:input path="fechaFin"  type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" class="form-control" required="required"/>
                 </div>
                 
                 <div class="form-group">
                     <label>Asunto <form:errors path="asunto" style="color:red"  /> </label>                  
-                    <form:input path="asunto" type="text" id="asunto" name="asunto" formControlName="asunto" class="form-control"/>
+                    <form:input path="asunto" type="text" id="asunto" name="asunto" formControlName="asunto" class="form-control" required="required"/>
                 </div>                                                            
                 <div class="form-group">
                     <label>Lugar<form:errors path="lugar" style="color:red"  /> </label>                  
-                    <form:input path="lugar" type="text" id="lugar" name="lugar" formControlName="lugar" class="form-control"/>
+                    <form:input path="lugar" type="text" id="lugar" name="lugar" formControlName="lugar" class="form-control" required="required"/>
                 </div>     
                   <div class="form-group">
                     <label>Imagen<form:errors path="imagen" style="color:red"  /> </label>                  
@@ -267,8 +267,38 @@
                     <form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" formControlName="promedioCalificacion" class="form-control"/>
                 </div>                
 
+<!-- 
+
+<label>Ciudades</label>
+			<select class="form-select" aria-label="Default select example">
+			  <option selected>Elije una opción</option>
+			  <option value="1">Quito</option>
+			  <option value="2">Colombia</option>
+			  <option value="3">Manabi</option>
+			</select>
+			<br>
+			
+			<label>Provincia</label>
+			 <select class="form-select" aria-label="Default select example">
+			  <option selected>Elije una opción</option>
+			  <option value="1">Pichincha</option>
+			  <option value="2">Tungurahua</option>
+			  <option value="3">Imbabura</option>
+			</select>
+			<br>
+			                                                                                                                                                                                      
+			<label>Region</label>
+			<select class="form-select" aria-label="Default select example">
+			  <option selected>Elije una opción</option>
+			  <option value="1">Costa</option>
+			  <option value="2">Sierra</option>
+			  <option value="3">Oriente</option>
+			</select>
+			<br>
+			 -->
+			
                 <div class="d-grid gap-2" style="padding-top: 5px">
-				  <button class="btn btn-primary" type="submit" id="btnGuardar">Guardar</button>
+				  <button class="btn btn-primary" type="submit" id="btnGuardar" >Guardar</button>
 				   <div class="d-grid gap-2" style="padding-top: 5px">
 				  <button  class="btn btn-primary"  type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar</button>
 <!-- 		<button type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar </button>
