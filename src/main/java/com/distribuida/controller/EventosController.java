@@ -64,7 +64,7 @@ public class EventosController {
 			//promedio=eventosService.promedio(eventosDetalles);
 		  eventos1.get(0).setPromedioCalificacion(promedio);
 		  
-
+/*----*/
 				modelMap.addAttribute("eventos",eventos1);
 				return "listar-eventos";
 
