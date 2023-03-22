@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>   
 <!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -8,13 +7,9 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Usuarios agregar</title>
+<title>HOME</title>
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
- <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/checkout/">
-
-<link href="/docs/5.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <style>
       .bd-placeholder-img {
         font-size: 1.125rem;
@@ -97,8 +92,10 @@
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-</head>
+  </head>
+  
 <body>
+
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
   <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">ISMAC</a>
   <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -107,7 +104,7 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
+       <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
     </div>
   </div>
 </header>
@@ -118,7 +115,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/dashboard">
+            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/dashboard">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -127,13 +124,15 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" href="${pageContext.request.contextPath}/usuarios/frmAdd">
+            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios/frmAdd">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file align-text-bottom" aria-hidden="true">
               <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
               <polyline points="13 2 13 9 20 9"></polyline>
               </svg>
 			  Registro
+			  
             </a>
+            
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/usuarios">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
@@ -146,12 +145,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link"  href="${pageContext.request.contextPath}/eventos">
+            <a class="nav-link" href="${pageContext.request.contextPath}/eventos">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
               <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
               <polygon points="12 15 17 21 7 21 12 15"></polygon>
               </svg>
               Eventos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="${pageContext.request.contextPath}/eventos/agregar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
+              <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+              <polygon points="12 15 17 21 7 21 12 15"></polygon>
+              </svg>
+              Agregar Eventos
             </a>
           </li>
           <li class="nav-item">
@@ -186,80 +194,20 @@
         </ul>
       </div>
     </nav>
+  </div>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-<h1>Registro de Usuarios</h1>
-<div class="table-responsive">
-<form:form action="add" modelAttribute="usuario" method="POST">
-		
-		<form:hidden path="idUsuario"/> 
-		 <label >Cedula                 
-                  	<form:input path="cedula" type="number" id="cedula" name="cedula" formControlName="cedula" class="form-control" maxlength="20" />                                                    
-                </div>                                
-		
-		<!--   Cedula
-		<form:input path="cedula" type="number" id="cedula" name="cedula" formControlName="cedula" maxLength="10"/>
-		-->
-		<br>
-		<label>Nombre1 
-		<form:input path="nombre1" type="text" id="nombre1" name="nombre1" formControlName="nombre1" class="form-control" maxLength="15" />
-		<br>
-		<label>Nombre2 
-		<form:input path="nombre2" type="text" id="nombre2" name="nombre2" formControlName="nombre2" class="form-control" maxLength="15" />
-		<br>
-		<label>Apellido1
-		<form:input path="apellido1" type="text" id="apellido1" name="apellido1" formControlName="apellido1" class="form-control" maxLength="15" />
-		<br>
-		<label>Apellido2
-		<form:input path="apellido2" type="text" id="apellido2" name="apellido2" formControlName="apellido2"  class="form-control" maxLength="15" />
-		<br>
-		<label>Fecha de Nacimiento
-		<form:input path="fechaNacimiento" type="date" id="fechaNacimiento" name="fechaNacimiento"  class="form-control" />
-		<br>
-		<label>Edad
-		<form:input path="edad" type="number" id="edad" name="edad"  class="form-control" maxLength="15" />
-		<br>
-	
-		<label> Sexo <form:errors path="sexo" style="color:red" /></label>  <%-- <form:errors path="" style="color:red" /> --%>
-	                 <div class="form-group">
-		                
-		                 <div class="form-check form-check-inline">		                  		                                
-						   <form:radiobutton path="sexo" class="form-check-input" value="Masculino" name="sexo" id="flexRadioDefault1" />						  						
-						   <label class="form-check-label" for="flexRadioDefault1">Masculino</label>
-						 </div>
-						 
-						 <div class="form-check form-check-inline">						   						 					
-						   <form:radiobutton path="sexo" class="form-check-input" value="Femenino" name="sexo" id="flexRadioDefault2" />			
-						   <label class="form-check-label" for="flexRadioDefault2">Femenino</label>
-						 </div>
-						 <br>
-		<label>Direccion
-		<form:input path="direccion" type="text" id="direccion" name="direccion"  class="form-control" maxLength="40" />
-		<br>
-		<label>Telefono
-		<form:input path="telefono" type="number" id="telefono" name="telefono"  class="form-control" maxLength="20" />
-		<br>
-		<label>Correo
-		<form:input path="correo" type="email" id="correo" name="correo"  class="form-control" maxLength="40" />
-		<br>
-		<br>
 
-		
-		
-		
-		
-		
-		
-		
-		
-		</div>
-		
-		<button type="submit" id="btnGuardar" class="btn btn-primary">Guardar </button>
-		<button type="button" id="btnCancelar" class="btn btn-danger" onClick="window.location.href='/Examen-Web/usuarios/findAll'; return false;">Cancelar </button>
-	</form:form>
-	
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+
+
+	<hr>	
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+	
 
 </body>
 </html>
+
+
+
+
