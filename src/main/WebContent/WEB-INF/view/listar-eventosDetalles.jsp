@@ -113,7 +113,7 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
     </div>
   </div>
 </header>
@@ -124,7 +124,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/">
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/dasboard">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
          	<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -169,7 +169,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   			  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
 			</svg>
@@ -205,112 +205,38 @@
       
       
 <h1>Eventos Detalles</h1>
-<br>
 
-
-<%-- 	<button><a href="${pageContext.request.contextPath}/eventos/frmAdd" >Añadir</a></button>
- --%>	
- 
-    <%-- <form action="findAllUsuario" method="get">
- 
-     <input type="search" id="busuqeda" name="busqueda" value="${busqueda}">
-<!--      <button type="submit">Buscar Eventos</button>
- --> 
-  </form> --%>
-  
-  
-  
-  <%--  <form action="findAllUsuario2" method="get">
- 
-     <input type="search" id="busuqeda" name="busqueda" value="${busqueda}">
-     <button type="submit">Buscar Usuario</button>
- 
-  </form>   --%>
-  
-  
-  <h6>Buscar Eventos</h6>
-  
-  <form id="eventos1" name="eventos1" action="findAllUsuario"  method="get">
-<select id="eventos" name="eventos" onclick="document.getElementById('eventos1').submit();" class="form-select" aria-label="Default select example" >
-<c:forEach var="item" items="${eventos}"  >
-<option value="${item.id}">${item.nombre} <option> 
-
-</c:forEach>
-
-</select>
-
-</form>
- 
-   <h6>Buscar Usuarios</h6>
- 
- 
-<form id="usuario1" name="usuario1" action="findAllUsuario2"  method="get" >
-<select id="usuario" name="usuario" onclick="document.getElementById('usuario1').submit();"  class="form-select" aria-label="Default select example">
-<c:forEach var="item" items="${usuario}"  >
-<option value="${item.idUsuario}">${item.nombre1} ${item.apellido1} <option> 
-
-</c:forEach>
-
-</select>
-</form>
-
-  
-<!--   <label>Buscar Eventos</label>
-			 <select class="form-select" aria-label="Default select example">
-			  <option selected>Eventos</option>
-			  <option value="1">Ismac años 80</option>
-			  <option value="2">Casa abierta Software</option>
-			  <option value="3">Casa Abierta ismac</option>
-			</select>
-			<br>
-			
-			
- <label>Buscar Usuario</label>
-			 <select class="form-select" aria-label="Default select example">
-			  <option selected>Usuarios</option>
-			  <option value="1">Karol Caicedo</option>
-			  <option value="2">Andres Morales</option>
-			  <option value="3">Ismael Manosalvas</option>
-			  <option value="3">Anderson Toapanta</option>
-			  <option value="3">Esteban Sanguano</option>
-			  
-		  
-			</select>
-			<br>	 -->		
-  
-  
- <div class="table-responsive">
+	<button><a href="${pageContext.request.contextPath}/eventos/frmAdd" >Añadir</a></button>
+	<div class="table-responsive">
 	<table class="table table-striped table-sm">
 	<thead>
 		<tr>
 			<th scope="col">id</th>
 			<th scope="col">Descripcion</th>
 			<th scope="col">Calificacion</th>
-			<<th scope="col">usuario</th>
-		   <th scope="col">Apellido</th>
-			<th scope="col">evento</th>
-			 
+			<th scope="col">id Usuario</th>
+			<th scope="col">id Evento</th>
+			
 			
 		</tr>
 	</thead>
 	<tbody>
 		
-		<c:forEach var="item" items="${eventosDetalles}">
+		<c:forEach var="item" items="${eventos}">
 		
 		<tr>
 		
 			<td>${item.id} </td>
-			<td>${item.descripcion} </td>
-			<td>${item.calificacion} </td>
-			<td>${item.usuario.nombre1}</td>
-			<td> ${item.usuario.apellido1}</td>
-			<td>${item.evento.nombre} </td> 
+			<td>${item.Descripcion} </td>
+			<td>${item.Calificacion} </td>
+			<td>${item.usuario} </td>
+			<td>${item.evento} </td>
 			
 			
-			<%-- <td>
+			<td>
 				<button type="button" class="btn btn-outline-success"><a href="${pageContext.request.contextPath}/eventosDetalles/findOne?id=${item.id}&opcion=1" >Actualizar</a></button>
 				<button type="button" class="btn btn-outline-danger" class="btn btn-danger"><a href="${pageContext.request.contextPath}/eventosDetalles/findOne?id=${item.id}&opcion=2" >Borrar</a></button>
-			<td>  --%>
+			<td> 
 		</tr>
 		</c:forEach>
 	</tbody>
@@ -319,16 +245,6 @@
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
-<script > 
 
-function envioid(){
-var evento= document.getElementById("eventos").value;
-document.getElementById("busqueda").value=evento;
-
-alert(evento);
-}
-
-
-</script>
 </body>
 </html>

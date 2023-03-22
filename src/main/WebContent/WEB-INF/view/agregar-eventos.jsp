@@ -104,7 +104,7 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="#">Sign out</a>
+      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
     </div>
   </div>
 </header>
@@ -115,7 +115,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/">
+            <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/dasboard">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -150,6 +150,7 @@
               </svg>
               Eventos
             </a>
+            </li>
              <li class="nav-item">
             <a class="nav-link active" href="${pageContext.request.contextPath}/eventos/agregar">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
@@ -160,7 +161,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/eventos">
+            <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   			  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
 			</svg>
@@ -234,24 +235,24 @@
 		<div class="form-group" >
                   <label >Nombre<form:errors path="nombre" style="color:red"  /> </label> 
                   <!-- class="form-control is-invalid" -->                
-                  	<form:input path="nombre" type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control" maxlength="20" required="required"/>                                                    
+                  	<form:input path="nombre" type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control" maxlength="20" />                                                    
                 </div>                                
                 <div class="form-group">
                     <label>Fecha de Inicio <form:errors path="fechaInicio" style="color:red" /></label>                  
-                    <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" class="form-control" required="required"/>
+                    <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" class="form-control"/>
                 </div>
                 <div class="form-group">
                     <label>Fecha de Final <form:errors path="fechaFin" style="color:red" /></label>                  
-                    <form:input path="fechaFin"  type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" class="form-control" required="required"/>
+                    <form:input path="fechaFin"  type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" class="form-control"/>
                 </div>
                 
                 <div class="form-group">
                     <label>Asunto <form:errors path="asunto" style="color:red"  /> </label>                  
-                    <form:input path="asunto" type="text" id="asunto" name="asunto" formControlName="asunto" class="form-control" required="required"/>
+                    <form:input path="asunto" type="text" id="asunto" name="asunto" formControlName="asunto" class="form-control"/>
                 </div>                                                            
                 <div class="form-group">
                     <label>Lugar<form:errors path="lugar" style="color:red"  /> </label>                  
-                    <form:input path="lugar" type="text" id="lugar" name="lugar" formControlName="lugar" class="form-control" required="required"/>
+                    <form:input path="lugar" type="text" id="lugar" name="lugar" formControlName="lugar" class="form-control"/>
                 </div>     
                   <div class="form-group">
                     <label>Imagen<form:errors path="imagen" style="color:red"  /> </label>                  
@@ -267,38 +268,8 @@
                     <form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" formControlName="promedioCalificacion" class="form-control"/>
                 </div>                
 
-<!-- 
-
-<label>Ciudades</label>
-			<select class="form-select" aria-label="Default select example">
-			  <option selected>Elije una opción</option>
-			  <option value="1">Quito</option>
-			  <option value="2">Colombia</option>
-			  <option value="3">Manabi</option>
-			</select>
-			<br>
-			
-			<label>Provincia</label>
-			 <select class="form-select" aria-label="Default select example">
-			  <option selected>Elije una opción</option>
-			  <option value="1">Pichincha</option>
-			  <option value="2">Tungurahua</option>
-			  <option value="3">Imbabura</option>
-			</select>
-			<br>
-			                                                                                                                                                                                      
-			<label>Region</label>
-			<select class="form-select" aria-label="Default select example">
-			  <option selected>Elije una opción</option>
-			  <option value="1">Costa</option>
-			  <option value="2">Sierra</option>
-			  <option value="3">Oriente</option>
-			</select>
-			<br>
-			 -->
-			
                 <div class="d-grid gap-2" style="padding-top: 5px">
-				  <button class="btn btn-primary" type="submit" id="btnGuardar" >Guardar</button>
+				  <button class="btn btn-primary" type="submit" id="btnGuardar">Guardar</button>
 				   <div class="d-grid gap-2" style="padding-top: 5px">
 				  <button  class="btn btn-primary"  type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar</button>
 <!-- 		<button type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar </button>

@@ -104,7 +104,7 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
+       <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
     </div>
   </div>
 </header>
@@ -115,7 +115,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">
+            <a class="nav-link active" aria-current="page" href="${pageContext.request.contextPath}/dasboard">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -130,7 +130,9 @@
               <polyline points="13 2 13 9 20 9"></polyline>
               </svg>
 			  Registro
+			  
             </a>
+            
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/usuarios">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
@@ -143,12 +145,21 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/">
+            <a class="nav-link" href="${pageContext.request.contextPath}/eventos">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
               <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
               <polygon points="12 15 17 21 7 21 12 15"></polygon>
               </svg>
               Eventos
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="${pageContext.request.contextPath}/eventos/agregar">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
+              <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
+              <polygon points="12 15 17 21 7 21 12 15"></polygon>
+              </svg>
+              Agregar Eventos
             </a>
           </li>
           <li class="nav-item">

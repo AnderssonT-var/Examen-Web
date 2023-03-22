@@ -127,19 +127,19 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/">
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/dasboard">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/registro/add">
+            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios/frmAdd">
               <span data-feather="file" class="align-text-bottom"></span>
               Registro
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios">
+            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios/findAll">
               <span data-feather="users" class="align-text-bottom"></span>
               Usuarios
             </a>
@@ -150,8 +150,8 @@
               Eventos
             </a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
+          <li class="nav-item ">
+            <a class="nav-link active" href="${pageContext.request.contextPath}/mi-cuenta">
               <span data-feather="user" class="align-text-bottom"></span>
               Mi Cuenta
             </a>
