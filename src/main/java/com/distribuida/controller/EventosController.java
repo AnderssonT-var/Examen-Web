@@ -55,14 +55,20 @@ public class EventosController {
 	
 	
 	@PostMapping("/add")
-	public String add(@ModelAttribute("eventos") Eventos eventos, BindingResult bindingResult) {
+	public String add(@ModelAttribute("eventos") Eventos eventos,@RequestParam("ciudades") @Nullable String Ciudades, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) { 
 			//eventosService.add(eventos);
 			return "agregar-eventos";
 		} else {
+
+			List<Ciudades> ciudades = ciudadesService.findAll(Ciudades);
+			Ciudades ciudades1 = ciudades.get(0);
+			Eventos eventos1 = eventos;
+			eventos1.setCiudades(ciudades1);
+
 			eventosService.add(eventos);
 			eventosService.add(5.032,2);
-			return "redirect:/eventos";
+			return "redirect:/eventos/findAll";
 		}
 	}
 	
@@ -73,9 +79,19 @@ public class EventosController {
 	}
 	
 	@RequestMapping("/agregar")
-	public String frmAdd(Model model) {
+	public String frmAdd(ModelMap ModelMap) {
 		Eventos eventos = new Eventos();
-		model.addAttribute("eventos", eventos);
+
+		List<Regiones> regiones = regionesService.findAll();
+	    modelMap.addAttribute("regiones",regiones);
+		
+		List<Provincias> provincias = provinciasService.findAll();
+		modelMap.addAttribute("provincias",provincias);
+		
+		List<Ciudades> ciudades = ciudadesService.findAll();
+		modelMap.addAttribute("ciudades",ciudades);
+
+		modelMap.addAttribute("eventos", eventos);
 		return "agregar-eventos";
 	}
 	/*fdgdfg*/
