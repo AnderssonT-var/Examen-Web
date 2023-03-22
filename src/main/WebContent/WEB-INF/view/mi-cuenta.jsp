@@ -127,7 +127,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/dasboard">
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/dashboard">
               <span data-feather="home" class="align-text-bottom"></span>
               Dashboard
             </a>
@@ -139,7 +139,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios/findAll">
+            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios">
               <span data-feather="users" class="align-text-bottom"></span>
               Usuarios
             </a>
@@ -150,7 +150,7 @@
               Eventos
             </a>
           </li>
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link active" href="${pageContext.request.contextPath}/mi-cuenta">
               <span data-feather="user" class="align-text-bottom"></span>
               Mi Cuenta
@@ -222,35 +222,24 @@
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js" ></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
 
-    <script>
-	  var $table = $('#table2')
-	
-	  $(function() {
-	    $table.bootstrapTable({
-	      sortReset: true
-	    })
-	    
-	  })
-	  
-	  
-	    var $tabla1 = $('#tabla1')
-	
-		  $(function() {
-		    $tabla1.bootstrapTable({
-		      sortReset: true
-		    })
-		    
-		  })
-	  
-	/*   if(codigo1 == 1){
-		  alertify.success('Success message');
-	  }
- */	  
-	  //alertify.alert('Ready!');
-	    //alertify.success('Success message');
-	  //alertify.error('Error message');
-	/*  alertify.warning('Warning message');
-	    alertify.message('Normal message'); */	  	
-	</script>
+
+    <div class="container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        Cedula
+        <input type="text" id="cedula" name="cedula" value="${Usuario.cedula}">
+      </div>
+      <div class="col">
+        Nombres
+        <input type="text" id="nombres" name="nombres" value="${Usuario.nombres}">
+      </div>
+      <div class="col">
+        Apellidos
+        <input type="text" id="apellidos" name="apellidos" value="${Usuario.apellidos}">
+      </div>
+      
+    </div>
+  </div>	
+
 </body>
 </html>

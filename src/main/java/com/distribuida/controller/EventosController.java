@@ -27,6 +27,7 @@ public class EventosController {
 	private EventosService eventosService;
 	
 	
+	
 	@RequestMapping
 	public String findAll(Model model) {
 	List<Eventos> eventos = eventosService.findAll();
