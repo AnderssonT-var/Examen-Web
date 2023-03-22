@@ -109,18 +109,73 @@ public class EventosDetallesDAOImpl implements EventosDetallesDAO {
 
 
 
+//
+//	@Override
+//	@Transactional
+//	public void promedioCalificacion() {
+//		// TODO Auto-generated method stub
+//		Session session=sessionFactory.getCurrentSession();
+//
+//		Query query=session.createQuery( "select avg (calificacion) from EventosDetalles where id_evento  = 2 group by id_evento=2; ",EventosDetalles.class);
+//
+//		 Eventos eventos=session.get(Eventos.class, 2);
+//		eventosDAO.add(eventos);
+//	}
+	
+	@Override
+	@Transactional
+	public List<EventosDetalles>findAll(int idEvento) {
+		
+		Session session=sessionFactory.getCurrentSession();
+
+		   Query<EventosDetalles> query= session.createQuery(
+	       		
+	       		"select evd "
+	       		+ " from EventosDetalles evd "
+	       		+ " where evd.evento.id  = : id_evento "
+
+	       		
+
+	    		,EventosDetalles.class);
+	       query.setParameter("id_evento",idEvento);
+			return query.getResultList();
+	}
+
 
 	@Override
 	@Transactional
-	public void promedioCalificacion() {
-		// TODO Auto-generated method stub
+	public List<EventosDetalles>findAll1(int idUsuario) {
+		
 		Session session=sessionFactory.getCurrentSession();
 
-		Query query=session.createQuery( "select avg (calificacion) from EventosDetalles where id_evento  = 2 group by id_evento=2; ",EventosDetalles.class);
+		   Query<EventosDetalles> query= session.createQuery(
+	       		
+	       		"select evd "
+	       		+ " from EventosDetalles evd "
+	       		+ " where evd.usuario.id  = : id_usuario "
+	       		
 
-		 Eventos eventos=session.get(Eventos.class, 2);
-		eventosDAO.add(eventos);
+	    		,EventosDetalles.class);
+	       query.setParameter("id_usuario",idUsuario);
+			return query.getResultList();
 	}
-	
+//	@Override
+//	@Transactional
+//	public List<EventosDetalles> findAll1(String nombre) {
+//		// TODO Auto-generated method stub
+//		Session session=sessionFactory.getCurrentSession();
+//
+//	   Query<EventosDetalles> query= session.createQuery(
+//       		
+//			   "select evd "
+//			       		+ " from EventosDetalles evd "
+//			       		+ " where evd.Eventos.nombre  = : nombre "
+//		       		
+//
+//    		,EventosDetalles.class);
+//       query.setParameter("nombre",nombre);
+//		return query.getResultList();
+//
+//	}
 
 }

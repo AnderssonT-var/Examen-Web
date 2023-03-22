@@ -8,7 +8,7 @@ import com.distribuida.entities.Eventos;
 
 public interface EventosDAO {
 
-	
+
 	public List<Eventos> findAll();
 	
 	public Eventos findOne(int id);
@@ -20,5 +20,6 @@ public interface EventosDAO {
 	public void del(int id);
 	
 	public List<Eventos> findAll(String busqueda);
+
 
 }

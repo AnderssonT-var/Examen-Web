@@ -78,7 +78,7 @@ public class EventosController {
 		model.addAttribute("eventos", eventos);
 		return "agregar-eventos";
 	}
-	
+	/*fdgdfg*/
 	
 
 	@InitBinder

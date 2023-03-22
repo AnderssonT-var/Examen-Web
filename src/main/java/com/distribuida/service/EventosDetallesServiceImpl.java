@@ -21,7 +21,7 @@ import com.distribuida.entities.Usuario;
 public class EventosDetallesServiceImpl implements EventosDetallesService {
 
 	
-	
+
 	@Autowired
 	private EventosDetallesDAO eventosDetallesDAO;
 	
@@ -111,6 +111,18 @@ public class EventosDetallesServiceImpl implements EventosDetallesService {
 		return eventosDetallesDAO.findOne(eventosDetalles);
 	}
 
-	
+	@Override
+	public List<EventosDetalles> findAll(int idEvento) {
+		// TODO Auto-generated method stub
+		
+		return eventosDetallesDAO.findAll(idEvento);
+	}
 
+	@Override
+	public List<EventosDetalles> findAll1(int idUsuario) {
+		// TODO Auto-generated method stub
+		
+		return eventosDetallesDAO.findAll1(idUsuario);
+	}
+	
 }
