@@ -9,7 +9,7 @@ import com.distribuida.entities.EventosDetalles;
 public interface EventosDetallesService {
 
 	
-	public List<EventosDetalles> findAll();
+public List<EventosDetalles> findAll();
 	
 	public EventosDetalles findOne(int id);
 	
@@ -25,6 +25,15 @@ public interface EventosDetallesService {
 
 	public EventosDetalles findOne(EventosDetalles eventosDetalles);
 
+	//List<EventosDetalles> findAll(String busqueda);
+	
+	List<EventosDetalles> findAll(int idEvento);
+
 	List<EventosDetalles> findAll(String busqueda);
+
+	List<EventosDetalles> findAll1(int idUsuario);
+
+
+
 	
 }

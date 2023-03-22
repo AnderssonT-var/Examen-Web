@@ -5,11 +5,11 @@ import java.util.List;
 
 import com.distribuida.entities.Ciudades;
 import com.distribuida.entities.Eventos;
+import com.distribuida.entities.EventosDetalles;
 
 
 public interface EventosService {
-
-	public List<Eventos> findAll();
+public List<Eventos> findAll();
 	
 	public Eventos findOne(int id);
 	
@@ -24,10 +24,12 @@ public interface EventosService {
 	//public void add( String nombre, Date fechaInicio, Date fechaFin, String asunto, String lugar, String imagenNombre,Double promedioCalificacion);
 
 	void add(String nombre, Date fechaInicio, Date fechaFin, String asunto, String lugar, byte[] imagen,
-			String imagenNombre, double promedioCalificacion,int id_ciudad);
+			String imagenNombre, Double promedioCalificacion,int id_ciudad);
 
 	List<Eventos> findAll(String busqueda);
 
-	public void add(double calificacion, int id_evento);
+	public void add(Double calificacion, int id_evento);
+	
+	public double promedio(List<EventosDetalles>eventosDetalles);
 	
 }
