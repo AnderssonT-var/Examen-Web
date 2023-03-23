@@ -170,103 +170,37 @@
     </nav>
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-      
-      
-<h1>Usuarios</h1>
+<center>
+<h1>ENVIO DE CORREOS</h1>
+</center>
 
+<div id="cuadro">
+<center>
+<form:form action="enviocorreo" modelAttribute="usuario" method="get">
 
-	<form action="findAll" method="get">
-	<input type="search" id="busqueda" name="busqueda" value="${busqueda}">
-	<button type="submit"  class="btn btn-primary">Busqueda</button>	
-	</form>
-	<br>
-	<br>
+<hr>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+
+<label id="subtitulo1">CORREO</label>
+		<%-- <imput:hidden id="usuarios" name="usuarios" value="${usuarios}"/> --%>
+		<form:hidden path="idUsuario"/> 
+			
+		<form:input path="correo" type="email" id="correo" name="correo" maxLength="40" />
+		<br></br> 
+		
+	<button type="submit" id="btnGuardar">ENVIAR</button>
+	</form:form>
+	<br></br>
+	<br></br>
+	<br></br>
 	
-	<button type="button" class="btn btn-dark btn-lg"><a href="${pageContext.request.contextPath}/usuarios/frmAdd" ><svg svg style="color: white;  text-decoration: none;xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
-  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
-</svg> </a></button> 
-
-<button type="button" class="btn btn-dark btn-lg"><a href="${pageContext.request.contextPath}/envio/frmAdd" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
-  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"/>
-  <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
-</svg> </a></button> 
-	<div class="table-responsive">
-	<table id="tabla1">
-	<thead>
-		<tr>
-			<th data-field="idUsuario" >ID</th>
-			<th data-field="Cedula" >Cedula</th>
-			<th data-field="1er Nombre" >Nombre1</th>
-			 <th data-field="2do Nombre" >Nombre2</th>
-			<th data-field="1er Apellido" >Apellido1</th>
-			 <th data-field="2do Apellido" >Apellido2</th>
-			<th data-field="Fecha de Nacimiento" >Fecha Nacimiento</th>
-			 <th data-field="Edad" >Edad</th>
-			<th data-field="Sexo" >Sexo</th>
-			<th data-field="Direccion">Direccion </th>
-			<th data-field="Telefono" >Telefono</th>
-			 <th data-field="Correo">Correo</th>
-			 <th data-field="Tipo Usuario" >Tipo</th>
-			 <th>Acciones </th>
-		</tr>
-	</thead>
-	<tbody>
-		
-		<c:forEach var="item" items="${usuarios}">
-		<tr>
-		
-			<td>${item.idUsuario} </td>
-			<td>${item.cedula} </td>
-			<td>${item.nombre1} </td>
-			<td>${item.nombre2} </td>
-			<td>${item.apellido1} </td>
-			<td>${item.apellido2} </td>
-			<td>${item.fechaNacimiento}   </td>
-			<td>${item.edad} </td>
-			<td>${item.sexo} </td>
-			<td>${item.direccion}</td>
-			<td>${item.telefono}</td>
-			<td>${item.correo}</td>
-			<td>${item.tipo}</td>
-			<td> 
-			 <div class="container-fluid btn-group" role="group" aria-label="...">	 
-				<button type="button" class="btn btn-success" ><a href="${pageContext.request.contextPath}/usuarios/findOne?idUsuario=${item.idUsuario}&opcion=1" ><svg style="color: white;  text-decoration: none;
-				" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
-  <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2v1z"></path>
-  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466z"></path>
-</svg></a></button>
-				<button type="button" class="btn btn-danger"><a href="${pageContext.request.contextPath}/usuarios/findOne?idUsuario=${item.idUsuario}&opcion=2" ><svg style="color: white;  text-decoration: none; xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
-  <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
-</svg></a></button>
-</div>
-			<td> 
-		</tr>
-		
-		</c:forEach>
-	</tbody>
-	<br>
-	</table>
+	<p id="marca">DESARROLLO DE SOTWARE</p>
+	</center>
 	</div>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-  <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js" integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE" crossorigin="anonymous"></script>
-      <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js" integrity="sha384-zNy6FEbO50N+Cg5wap8IKA4M/ZnLJgzc6w2NqACZaK0u0FXfOWRRJOnQtpZun8ha" crossorigin="anonymous"></script>
-      <script src="${pageContext.request.contextPath}/resources/js/dashboard.js"></script>
-	<script src="${pageContext.request.contextPath}/resources/js/jquery-3.6.3.min.js"></script>
-    <script src="${pageContext.request.contextPath}/resources/js/bootstrap.bundle.min.js" ></script>
-    <script src="${pageContext.request.contextPath}/resources/js/bootstrap-table.min.js"></script>
-    
-     <script>
-	    var $tabla1 = $('#tabla1')
 	
-		  $(function() {
-		    $tabla1.bootstrapTable({
-		      sortReset: true
-		    })
-		    
-		  })
-</script> 
+
 </body>
 </html>
