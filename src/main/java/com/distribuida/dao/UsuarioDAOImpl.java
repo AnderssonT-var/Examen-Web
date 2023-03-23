@@ -65,32 +65,28 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 		session.delete(usuario);
 	}
 
+
 	@Override
 	@Transactional
 	public List<Usuario> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		Session session= sessionFactory.getCurrentSession();
-		Query query = session.createQuery(
-			"Select US "
-				+" from Usuarios US"
-				+" where US.cedula LIKE : keyBusqueda "
-				+" or US.nombre1 LIKE : keyBusqueda "
-				+" or US.nombre2 LIKE : keyBusqueda "
-				+" or US.apellido1 LIKE : keyBusqueda "
-				+" or US.apellido2 LIKE : keyBusqueda "
-				+" or US.fechanacimiento LIKE : keyBusqueda "
-				+" or US.edad LIKE : keyBusqueda "
-				+" or US.sexo LIKE : keyBusqueda "
-				+" or US.direccion LIKE : keyBusqueda "
-				+" or US.telefono LIKE : keyBusqueda "
-				+" or US.correo LIKE : keyBusqueda "
-				+" or US.tipo LIKE : keyBusqueda "
+		Query <Usuario> query = session.createQuery(
+			" Select us "
+				+" from Usuario us "
+				+" where us.nombre1 LIKE : busqueda "
+				+" or us.nombre2 LIKE : busqueda "
+				+" or us.apellido1 LIKE : busqueda "
+				+" or us.apellido2 LIKE : busqueda "
+				+" or us.sexo LIKE : busqueda "
+				+" or us.direccion LIKE : busqueda "
+				+" or us.telefono LIKE : busqueda "
+				+" or us.correo LIKE : busqueda "
+				+" or us.tipo LIKE : busqueda "
 				, Usuario.class);
 				
-		query.setParameter("keybusqueda","%" +busqueda+"%");	
+		query.setParameter("busqueda","%" +busqueda+"%");	
 		return query.getResultList();
 	}
-
-	
 	
 }

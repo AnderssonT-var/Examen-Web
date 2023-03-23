@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,11 +28,17 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	
 	
-	@RequestMapping
-	public String findAll(Model model) {
-	List<Usuario> usuarios = usuarioService.findAll();
-	
-	model.addAttribute("usuarios",usuarios);
+	@RequestMapping("/findAll")
+	public String findAll(@RequestParam("busqueda") @Nullable String busqueda, ModelMap modelMap) {
+	List<Usuario> usuario=usuarioService.findAll();
+	if(busqueda == null) {
+		busqueda="";
+		usuario = usuarioService.findAll();
+	}else {
+		 usuario= usuarioService.findAll(busqueda);
+	}
+
+	modelMap.addAttribute("usuarios",usuario);
 	
 	return "listar-usuarios";
 	
@@ -52,6 +60,8 @@ public class UsuarioController {
 	}
 	
 	
+	
+	
 	@PostMapping("/add")
 	public String add(@ModelAttribute("usuario") Usuario usuario, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) { 
@@ -59,14 +69,14 @@ public class UsuarioController {
 			return "agregar-usuarios";
 		} else {
 			usuarioService.add(usuario);
-			return "redirect:/usuarios";
+			return "redirect:/usuarios/findAll";
 		}
 	}
 	
 	@RequestMapping("/del")
 	public String frmDel(@RequestParam("idUsuario")int id) {
 		usuarioService.del(id);
-		return "redirect:/usuarios";
+		return "redirect:/usuarios/findAll";
 	}
 	
 	@RequestMapping("/frmAdd")
@@ -75,7 +85,7 @@ public class UsuarioController {
 		model.addAttribute("usuario", usuario);
 		return "agregar-usuarios";
 	}
-	
+
 
 	@InitBinder
 		public void miBinder(WebDataBinder binder) {
