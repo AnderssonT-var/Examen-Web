@@ -25,8 +25,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 	public List<Usuario> findAll() {
 		// TODO Auto-generated method stub
 		Session session= sessionFactory.getCurrentSession();
-		List<Usuario> usuarios= session.createQuery("select us from Usuario us", Usuario.class).getResultList();
-		return usuarios;
+		return  session.createQuery("select us from Usuario us", Usuario.class).getResultList();
 	}
 
 	@Override

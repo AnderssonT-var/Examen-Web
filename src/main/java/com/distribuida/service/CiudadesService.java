@@ -8,7 +8,10 @@ import com.distribuida.entities.Ciudades;
 public interface CiudadesService {
 	
 	
-    public List<Ciudades> findAll();
+    public static List<Ciudades> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	public Ciudades findOne(int id);
 	
@@ -18,7 +21,10 @@ public interface CiudadesService {
 	
 	public void del(int id);
 	
-	public List<Ciudades> findAll(String busqueda);
+	public static List<Ciudades> findAll(String busqueda) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
    public void add(String ciudad,int id_provincia);

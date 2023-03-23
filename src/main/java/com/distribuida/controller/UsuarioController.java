@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+import com.distribuida.entities.EventosDetalles;
 import com.distribuida.entities.Usuario;
 import com.distribuida.service.UsuarioService;
 
@@ -28,17 +28,11 @@ public class UsuarioController {
 	private UsuarioService usuarioService;
 	
 	
-	@RequestMapping("/findAll")
-	public String findAll(@RequestParam("busqueda") @Nullable String busqueda, ModelMap modelMap) {
-	List<Usuario> usuario=usuarioService.findAll();
-	if(busqueda == null) {
-		busqueda="";
-		usuario = usuarioService.findAll();
-	}else {
-		 usuario= usuarioService.findAll(busqueda);
-	}
-
-	modelMap.addAttribute("usuarios",usuario);
+	@RequestMapping
+	public String findAll(Model model) {
+	List<Usuario> usuarios = usuarioService.findAll();
+	
+	model.addAttribute("usuarios",usuarios);
 	
 	return "listar-usuarios";
 	

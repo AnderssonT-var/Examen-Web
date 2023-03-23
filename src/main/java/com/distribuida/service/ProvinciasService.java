@@ -7,7 +7,10 @@ import com.distribuida.entities.Provincias;
 public interface ProvinciasService {
 
 	
-public List<Provincias> findAll();
+public static List<Provincias> findAll() {
+	// TODO Auto-generated method stub
+	return null;
+}
 	
 	public Provincias findOne(int id);
 		

@@ -42,7 +42,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public void up(Usuario usuario) {
 		// TODO Auto-generated method stub
-		usuarioDAO.add(usuario);
+		usuarioDAO.up(usuario);
 	}
 
 	@Override
@@ -73,7 +73,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 			Date fechaNacimiento, int edad, String sexo, String direccion, String telefono, String correo, String tipo) {
 		// TODO Auto-generated method stub
 		Usuario usuario = new Usuario(idUsuario,cedula,nombre1,nombre2,apellido1,apellido2,fechaNacimiento,edad,sexo,direccion,telefono,correo,tipo);
-		usuarioDAO.add(usuario);
+		usuarioDAO.up(usuario);
 	}
 
 	
