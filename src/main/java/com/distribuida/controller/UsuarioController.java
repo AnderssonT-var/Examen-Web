@@ -4,8 +4,10 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-
+import com.distribuida.entities.EventosDetalles;
 import com.distribuida.entities.Usuario;
 import com.distribuida.service.UsuarioService;
 
@@ -52,6 +54,8 @@ public class UsuarioController {
 	}
 	
 	
+	
+	
 	@PostMapping("/add")
 	public String add(@ModelAttribute("usuario") Usuario usuario, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) { 
@@ -59,14 +63,14 @@ public class UsuarioController {
 			return "agregar-usuarios";
 		} else {
 			usuarioService.add(usuario);
-			return "redirect:/usuarios";
+			return "redirect:/usuarios/findAll";
 		}
 	}
 	
 	@RequestMapping("/del")
 	public String frmDel(@RequestParam("idUsuario")int id) {
 		usuarioService.del(id);
-		return "redirect:/usuarios";
+		return "redirect:/usuarios/findAll";
 	}
 	
 	@RequestMapping("/frmAdd")
@@ -75,7 +79,7 @@ public class UsuarioController {
 		model.addAttribute("usuario", usuario);
 		return "agregar-usuarios";
 	}
-	
+
 
 	@InitBinder
 		public void miBinder(WebDataBinder binder) {

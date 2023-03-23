@@ -1,7 +1,2 @@
-Machala
-Esmeraldas
-Guayaquil
-Babahoyo
-Portoviejo
+Salinas
 Santa Elena
-Santo Domingo

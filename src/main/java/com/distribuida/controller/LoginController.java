@@ -43,15 +43,13 @@ public class LoginController {
 	}
 	
 	@GetMapping ("/dashboard")
-	
 	public String dashboard ()
 	{
 		
 		return "dashboard";
 		}
 	
-@GetMapping ("/mi-cuenta")
-	
+	@GetMapping ("/mi-cuenta")
 	public String micuenta()
 	{
 		

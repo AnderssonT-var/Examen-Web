@@ -7,7 +7,10 @@ import com.distribuida.entities.Regiones;
 public interface RegionesService {
 
 
-	public List<Regiones> findAll();
+	public static List<Regiones> findAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	public Regiones findOne(int id);
 	

@@ -193,196 +193,212 @@
       </div>
     </nav>
 
+
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
-<h1>Agregar Eventos</h1>
-
-<form:form action="add" modelAttribute="eventos" method="POST">
-		
-		<form:hidden path="id"/> 
-		
-		<%--   Nombre
-		<form:input path="nombre" type="text" id="nombre" name="nombre" maxLength="15" />
-		<br> 
-		Fecha de Inicio
-		<form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" />
-		<br>
-		Fecha de Final
-		<form:input path="fechaFin" type="date" id="fechaFin" name="fechaFin" />
-		<br>
-		Asunto
-		<form:input path="asunto" type="text" id="asunto" name="asunto" maxLength="15" />
-		<br>
-		Lugar
-		<form:input path="lugar" type="text" id="lugar" name="lugar" maxLength="15" />
-		<br>
-		Imagen
-		<form:input path="imagen" type="byte" id="imagen" name="imagen" maxLength="15" />
-		<br>
-		
-	    Imagen nombre
-		<form:input path="imagenNombre" type="imagenNombre" id="imagenNombre" name="imagenNombre" maxLength="15" />
-		<br>
-		Promedio Calificacion
-		<form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" maxLength="15" />
-		<br>
-		 ID Ciudad
-		<form:input path="id_ciudad" type="text" id="id_ciudad"" name="id_ciudad"" maxLength="40" />
-		<br> 
-		
-		<button type="submit" id="btnGuardar">Guardar </button>  --%>
-		
-		
-		<div class="form-group" >
-                  <label >Nombre<form:errors path="nombre" style="color:red"  /> </label> 
-                  <!-- class="form-control is-invalid" -->                
-                  	<form:input path="nombre" type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control" maxlength="20" />                                                    
-                </div>                                
-                <div class="form-group">
-                    <label>Fecha de Inicio <form:errors path="fechaInicio" style="color:red" /></label>                  
-                    <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" class="form-control"/>
-                </div>
-                <div class="form-group">
-                    <label>Fecha de Final <form:errors path="fechaFin" style="color:red" /></label>                  
-                    <form:input path="fechaFin"  type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" class="form-control"/>
-                </div>
-                
-                <div class="form-group">
-                    <label>Asunto <form:errors path="asunto" style="color:red"  /> </label>                  
-                    <form:input path="asunto" type="text" id="asunto" name="asunto" formControlName="asunto" class="form-control"/>
-                </div>                                                            
-                <div class="form-group">
-                    <label>Lugar<form:errors path="lugar" style="color:red"  /> </label>                  
-                    <form:input path="lugar" type="text" id="lugar" name="lugar" formControlName="lugar" class="form-control"/>
-                </div>     
-                  <div class="form-group">
-                    <label>Imagen<form:errors path="imagen" style="color:red"  /> </label>                  
-                    <form:input path="imagen" type="text" id="imagen" name="imagen" formControlName="imagen" class="form-control"/>
-                </div>  
-                      
-                  <div class="form-group">
-                    <label>Imagen Nombre<form:errors path="imagenNombre" style="color:red"  /> </label>                  
-                    <form:input path="imagenNombre" type="text" id="imagenNombre" name="imagenNombre" formControlName="imagenNombre" class="form-control"/>
-                </div> 
-                 <div class="form-group">
-                    <label>Promedio Calificaion<form:errors path="promedioCalificacion" style="color:red"  /> </label>                  
-                    <form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" formControlName="promedioCalificacion" class="form-control"/>
-                </div>  
-                
-                <label>Region</label>
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>Elije una opción</option>
-                  <option value="1">Costa</option>
-                  <option value="2">Sierra</option>
-                  <option value="3">Oriente</option>
-                </select>
+      <h1>Agregar Eventos</h1>
+      
+      <form:form action="add" modelAttribute="eventos" method="POST">
           
-          <%-- 			  <select id="regiones" name="regiones">
-                <c:forEach var="item" items="${regiones}">
-                  <option value="${item.id}" >${item.region}<option>
-                </c:forEach>
-                </select> --%>
-                
-          <%-- 			<select id="provincias" name="provincias">
-                <c:forEach var="item" items="${provincias}">
-                  <option value="${item.id}" >${item.provincia}<option>
-                </c:forEach>
-                </select>
-                
-                <select id="ciudades" name="ciudades">
-                <c:forEach var="item" items="${ciudades}">
-                  <option value="${item.id}" >${item.ciudad}<option>
-                </c:forEach>
-                </select>  --%>
-                
-                 <form>
-                 <label>Provincia</label>
-                <select id="regiones" name="regiones" class="form-control">
-                    <option value="0">Elija una provincia</option>
-                <option value="azuay.txt">Azuay</option>
-                <option value="bolivar.txt">Bolívar</option>
-                <option value="canar.txt">Cañar</option>
-                <option value="carchi.txt">Carchi</option>
-                <option value="chimborazo.txt">Chimborazo</option>
-                <option value="cotopaxi.txt">Cotopaxi</option>
-                <option value="eloro.txt">El Oro</option>
-                <option value="esmeraldas.txt">Esmeraldas</option>
-                <option value="galapagos.txt">Galápagos</option>
-                <option value="guayas.txt">Guayas</option>
-                <option value="imbabura.txt">Imbabura</option>
-                <option value="loja.txt">Loja</option>
-                <option value="losrios.txt">Los Ríos</option>
-                <option value="manabi.txt">Manabí</option>
-                <option value="morona_santiago.txt">Morona Santiago</option>
-                <option value="napo.txt">Napo</option>
-                <option value="orellana.txt">Orellana</option>
-                <option value="pastaza.txt">Pastaza</option>
-                <option value="pichincha.txt">Pichincha</option>
-                <option value="santa_elena.txt">Santa Elena</option>
-                <option value="santo_domingo.txt">Santo Domingo de los Tsáchilas</option>
-                <option value="sucumbios.txt">Sucumbíos</option>
-                <option value="tungurahua.txt">Tungurahua</option>
-                <option value="zamora_chinchipe.txt">Zamora Chinchipe</option>
-                </select>
-                
-                <label>Ciudad</label>
-                <select id="provincias" name="provincias" class="form-control">
-                  <option>Elija una Ciudad</option>
-                </select>
-                <br>
-              </form>
-
-                <div class="d-grid gap-2" style="padding-top: 5px">
-				  <button class="btn btn-primary" type="submit" id="btnGuardar">Guardar</button>
-				   <div class="d-grid gap-2" style="padding-top: 5px">
-				  <button  class="btn btn-primary"  type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar</button>
-<!-- 		<button type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar </button>
- -->	</form:form>
-	
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
-<script > 
-
-
-
-
-  var regiones = document.querySelector('#regiones');
-  var provincias = document.querySelector('#provincias');
-  regiones.onchange = mandoRegiones;
-  
-  function reciboProvincias(respuesta) {
-  
-    limpiar(); 
-    
-    var lines = respuesta.split('\n');
-    for (var line = 0; line < lines.length; line++) {
-      var opt = document.createElement('option');
-      opt.innerHTML = lines[line];
-      opt.value = lines[line];
-      provincias.appendChild(opt);
-    }
-  
-  }
-  
-  function mandoRegiones() {
-    var ajax = new XMLHttpRequest();
-    ajax.open('GET','http://localhost:8080/Examen-Web/resources/'+ regiones.value);
-    ajax.onreadystatechange = function() {
-      console.log(ajax.status, ajax.readyState, ajax.responseText);
-      if (ajax.status === 200 && ajax.readyState === 4) {
-        reciboProvincias(ajax.responseText);
-      }
-      else
-        limpiar();
-    }
-    ajax.send();
-  }
-  
-  function limpiar(){
-  while(provincias.options.length > 0){                
-      provincias.remove(0);
-    } 
-  } 
-  
-  </script>
-</body>
-</html>
+          <form:hidden path="id"/> 
+          
+          <%--   Nombre
+          <form:input path="nombre" type="text" id="nombre" name="nombre" maxLength="15" />
+          <br> 
+          Fecha de Inicio
+          <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" />
+          <br>
+          Fecha de Final
+          <form:input path="fechaFin" type="date" id="fechaFin" name="fechaFin" />
+          <br>
+          Asunto
+          <form:input path="asunto" type="text" id="asunto" name="asunto" maxLength="15" />
+          <br>
+          Lugar
+          <form:input path="lugar" type="text" id="lugar" name="lugar" maxLength="15" />
+          <br>
+          Imagen
+          <form:input path="imagen" type="byte" id="imagen" name="imagen" maxLength="15" />
+          <br>
+          
+            Imagen nombre
+          <form:input path="imagenNombre" type="imagenNombre" id="imagenNombre" name="imagenNombre" maxLength="15" />
+          <br>
+          Promedio Calificacion
+          <form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" maxLength="15" />
+          <br>
+           ID Ciudad
+          <form:input path="id_ciudad" type="text" id="id_ciudad"" name="id_ciudad"" maxLength="40" />
+          <br> 
+          
+          <button type="submit" id="btnGuardar">Guardar </button>  --%>
+          
+          
+          <div class="form-group" >
+                        <label >Nombre<form:errors path="nombre" style="color:red"  /> </label> 
+                        <!-- class="form-control is-invalid" -->                
+                          <form:input path="nombre" type="text" id="nombre" name="nombre" formControlName="nombre" class="form-control" maxlength="20" required="required"/>                                                    
+                      </div>                                
+                      <div class="form-group">
+                          <label>Fecha de Inicio <form:errors path="fechaInicio" style="color:red" /></label>                  
+                          <form:input path="fechaInicio" type="date" id="fechaInicio" name="fechaInicio" formControlName="fechaInicio" class="form-control" required="required"/>
+                      </div>
+                      <div class="form-group">
+                          <label>Fecha de Final <form:errors path="fechaFin" style="color:red" /></label>                  
+                          <form:input path="fechaFin"  type="date" id="fechaFin" name="fechaFin" formControlName="fechaFin" class="form-control" required="required"/>
+                      </div>
+                      
+                      <div class="form-group">
+                          <label>Asunto <form:errors path="asunto" style="color:red"  /> </label>                  
+                          <form:input path="asunto" type="text" id="asunto" name="asunto" formControlName="asunto" class="form-control" required="required"/>
+                      </div>                                                            
+                      <div class="form-group">
+                          <label>Lugar<form:errors path="lugar" style="color:red"  /> </label>                  
+                          <form:input path="lugar" type="text" id="lugar" name="lugar" formControlName="lugar" class="form-control" required="required"/>
+                      </div>     
+                        <div class="form-group">
+                          <label>Imagen<form:errors path="imagen" style="color:red"  /> </label>                  
+                          <form:input path="imagen" type="text" id="imagen" name="imagen" formControlName="imagen" class="form-control"/>
+                      </div>  
+                            
+                        <div class="form-group">
+                          <label>Imagen Nombre<form:errors path="imagenNombre" style="color:red"  /> </label>                  
+                          <form:input path="imagenNombre" type="text" id="imagenNombre" name="imagenNombre" formControlName="imagenNombre" class="form-control"/>
+                      </div> 
+                     <%--   <div class="form-group">
+                          <label>Promedio Calificaion<form:errors path="promedioCalificacion" style="color:red"  /> </label>                  
+                          <form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" formControlName="promedioCalificacion" class="form-control"/>
+                      </div>   --%>              
+      
+      <!-- 
+      
+      <label>Ciudades</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Elije una opción</option>
+              <option value="1">Quito</option>
+              <option value="2">Colombia</option>
+              <option value="3">Manabi</option>
+            </select>
+            <br>
+            
+            <label>Provincia</label>
+             <select class="form-select" aria-label="Default select example">
+              <option selected>Elije una opción</option>
+              <option value="1">Pichincha</option>
+              <option value="2">Tungurahua</option>
+              <option value="3">Imbabura</option>
+            </select>
+            <br>
+                                                                                                                                                                                                  
+            <label>Region</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Elije una opción</option>
+              <option value="1">Costa</option>
+              <option value="2">Sierra</option>
+              <option value="3">Oriente</option>
+            </select>
+            <br>
+             -->
+            <label>Region</label>
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Elije una opción</option>
+              <option value="1">Costa</option>
+              <option value="2">Sierra</option>
+              <option value="3">Oriente</option>
+            </select>
+             
+      
+                       <label>Provincia</label>
+                      <select id="regiones" name="regiones" class="form-control">
+                          <option value="0">Elija una provincia</option>
+                      <option value="azuay.txt">Azuay</option>
+                      <option value="bolivar.txt">Bolívar</option>
+                      <option value="canar.txt">Cañar</option>
+                      <option value="carchi.txt">Carchi</option>
+                      <option value="chimborazo.txt">Chimborazo</option>
+                      <option value="cotopaxi.txt">Cotopaxi</option>
+                      <option value="eloro.txt">El Oro</option>
+                      <option value="esmeraldas.txt">Esmeraldas</option>
+                      <option value="galapagos.txt">Galápagos</option>
+                      <option value="guayas.txt">Guayas</option>
+                      <option value="imbabura.txt">Imbabura</option>
+                      <option value="loja.txt">Loja</option>
+                      <option value="losrios.txt">Los Ríos</option>
+                      <option value="manabi.txt">Manabí</option>
+                      <option value="morona_santiago.txt">Morona Santiago</option>
+                      <option value="napo.txt">Napo</option>
+                      <option value="orellana.txt">Orellana</option>
+                      <option value="pastaza.txt">Pastaza</option>
+                      <option value="pichincha.txt">Pichincha</option>
+                      <option value="santa_elena.txt">Santa Elena</option>
+                      <option value="santo_domingo.txt">Santo Domingo de los Tsáchilas</option>
+                      <option value="sucumbios.txt">Sucumbíos</option>
+                      <option value="tungurahua.txt">Tungurahua</option>
+                      <option value="zamora_chinchipe.txt">Zamora Chinchipe</option>
+                      </select>
+                      
+                      <label>Ciudad</label>
+                      <select id="provincias" name="provincias" class="form-control">
+                        <option>Elija una Ciudad</option>
+                      </select>
+                      <br>
+      
+      
+      
+            
+                      <div class="d-grid gap-2" style="padding-top: 5px">
+                <button class="btn btn-primary" type="submit" id="btnGuardar" >Guardar</button>
+                 <div class="d-grid gap-2" style="padding-top: 5px">
+                <button  class="btn btn-primary"  type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar</button>
+      <!-- 		<button type="button" id="btnCancelar" onClick="window.location.href='/Examen-Web'; return false;">Cancelar </button>
+       -->	</form:form>
+        
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+      
+      
+      
+      
+      
+       <script > 
+      
+        var regiones = document.querySelector('#regiones');
+        var provincias = document.querySelector('#provincias');
+        regiones.onchange = mandoRegiones;
+        
+        function reciboProvincias(respuesta) {
+        
+          limpiar(); 
+          
+          var lines = respuesta.split('\n');
+          for (var line = 0; line < lines.length; line++) {
+            var opt = document.createElement('option');
+            opt.innerHTML = lines[line];
+            opt.value = lines[line];
+            provincias.appendChild(opt);
+          }
+        
+        }
+        
+        function mandoRegiones() {
+          var ajax = new XMLHttpRequest();
+          ajax.open('GET','http://localhost:8080/Examen-Web/resources/'+ regiones.value);
+          ajax.onreadystatechange = function() {
+            console.log(ajax.status, ajax.readyState, ajax.responseText);
+            if (ajax.status === 200 && ajax.readyState === 4) {
+              reciboProvincias(ajax.responseText);
+            }
+            else
+              limpiar();
+          }
+          ajax.send();
+        }
+        
+        function limpiar(){
+        while(provincias.options.length > 0){                
+            provincias.remove(0);
+          } 
+        } 
+        
+        </script> 
+      </body>
+      </html>
