@@ -89,7 +89,11 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
+<<<<<<< HEAD
       <a class="nav-link px-3" href="#">Sign out</a>
+=======
+      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
     </div>
   </div>
 </header>
@@ -100,7 +104,11 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/">
+=======
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/dashboard">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
          	<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -116,6 +124,7 @@
               </svg>
 			  Registro
             </a>
+<<<<<<< HEAD
           </li>  
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/registro/principal">
@@ -129,6 +138,10 @@
           
           <li class="nav-item">
             <a class="nav-link active" href="${pageContext.request.contextPath}/usuarios/findAll">
+=======
+          <li class="nav-item">
+            <a class="nav-link active" href="${pageContext.request.contextPath}/usuarios">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
@@ -139,7 +152,11 @@
             </a>
           </li>
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="#">
+=======
+            <a class="nav-link" href="${pageContext.request.contextPath}/eventos">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
               <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
               <polygon points="12 15 17 21 7 21 12 15"></polygon>
@@ -148,7 +165,11 @@
             </a>
           </li>
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="#">
+=======
+            <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   			  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
 			</svg>
@@ -193,7 +214,19 @@
 	<br>
 	<br>
 	
+<<<<<<< HEAD
 	<button><a href="${pageContext.request.contextPath}/usuarios/frmAdd" >Añadir</a></button> 
+=======
+	<button type="button" class="btn btn-dark btn-lg"><a href="${pageContext.request.contextPath}/usuarios/frmAdd" ><svg svg style="color: white;  text-decoration: none;xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-plus-fill" viewBox="0 0 16 16">
+  <path d="M1 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+  <path fill-rule="evenodd" d="M13.5 5a.5.5 0 0 1 .5.5V7h1.5a.5.5 0 0 1 0 1H14v1.5a.5.5 0 0 1-1 0V8h-1.5a.5.5 0 0 1 0-1H13V5.5a.5.5 0 0 1 .5-.5z"/>
+</svg> </a></button> 
+
+<button type="button" class="btn btn-dark btn-lg"><a href="${pageContext.request.contextPath}/envio/frmAdd" ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-check-fill" viewBox="0 0 16 16">
+  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.026A2 2 0 0 0 2 14h6.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.606-3.446l-.367-.225L8 9.586l-1.239-.757ZM16 4.697v4.974A4.491 4.491 0 0 0 12.5 8a4.49 4.49 0 0 0-1.965.45l-.338-.207L16 4.697Z"/>
+  <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-1.993-1.679a.5.5 0 0 0-.686.172l-1.17 1.95-.547-.547a.5.5 0 0 0-.708.708l.774.773a.75.75 0 0 0 1.174-.144l1.335-2.226a.5.5 0 0 0-.172-.686Z"/>
+</svg> </a></button> 
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	<div class="table-responsive">
 	<table id="tabla1">
 	<thead>
@@ -272,4 +305,8 @@
 		  })
 </script> 
 </body>
+<<<<<<< HEAD
 </html>
+=======
+</html>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b

@@ -42,7 +42,11 @@ public class UsuarioServiceImpl implements UsuarioService {
 	@Override
 	public void up(Usuario usuario) {
 		// TODO Auto-generated method stub
+<<<<<<< HEAD
 		usuarioDAO.add(usuario);
+=======
+		usuarioDAO.up(usuario);
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	}
 
 	@Override
@@ -73,6 +77,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 			Date fechaNacimiento, int edad, String sexo, String direccion, String telefono, String correo, String tipo) {
 		// TODO Auto-generated method stub
 		Usuario usuario = new Usuario(idUsuario,cedula,nombre1,nombre2,apellido1,apellido2,fechaNacimiento,edad,sexo,direccion,telefono,correo,tipo);
+<<<<<<< HEAD
 		usuarioDAO.add(usuario);
 	}
 
@@ -80,6 +85,9 @@ public class UsuarioServiceImpl implements UsuarioService {
 	public Usuario findOne(Usuario usuarios) {
 		// TODO Auto-generated method stub
 		return usuarioDAO.findOne(usuarios);
+=======
+		usuarioDAO.up(usuario);
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	}
 
 	

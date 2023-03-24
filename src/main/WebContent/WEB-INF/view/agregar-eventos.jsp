@@ -104,7 +104,11 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
+<<<<<<< HEAD
       <a class="nav-link px-3" href="#">Sign out</a>
+=======
+      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
     </div>
   </div>
 </header>
@@ -115,7 +119,11 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/">
+=======
+            <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/dashborad">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -131,6 +139,7 @@
               </svg>
 			  Registro
             </a>
+<<<<<<< HEAD
           </li>
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/registro/principal">
@@ -141,6 +150,8 @@
 			  Registro A�os 80
             </a>
           </li> 
+=======
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/usuarios">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
@@ -160,6 +171,10 @@
               </svg>
               Eventos
             </a>
+<<<<<<< HEAD
+=======
+            </li>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
              <li class="nav-item">
             <a class="nav-link active" href="${pageContext.request.contextPath}/eventos/agregar">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
@@ -170,7 +185,11 @@
             </a>
           </li>
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="${pageContext.request.contextPath}/eventos">
+=======
+            <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   			  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
 			</svg>
@@ -275,7 +294,74 @@
                  <div class="form-group">
                     <label>Promedio Calificaion<form:errors path="promedioCalificacion" style="color:red"  /> </label>                  
                     <form:input path="promedioCalificacion" type="text" id="promedioCalificacion" name="promedioCalificacion" formControlName="promedioCalificacion" class="form-control"/>
+<<<<<<< HEAD
                 </div>                
+=======
+                </div>  
+                
+                <label>Region</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Elije una opción</option>
+                  <option value="1">Costa</option>
+                  <option value="2">Sierra</option>
+                  <option value="3">Oriente</option>
+                </select>
+          
+          <%-- 			  <select id="regiones" name="regiones">
+                <c:forEach var="item" items="${regiones}">
+                  <option value="${item.id}" >${item.region}<option>
+                </c:forEach>
+                </select> --%>
+                
+          <%-- 			<select id="provincias" name="provincias">
+                <c:forEach var="item" items="${provincias}">
+                  <option value="${item.id}" >${item.provincia}<option>
+                </c:forEach>
+                </select>
+                
+                <select id="ciudades" name="ciudades">
+                <c:forEach var="item" items="${ciudades}">
+                  <option value="${item.id}" >${item.ciudad}<option>
+                </c:forEach>
+                </select>  --%>
+                
+                 <form>
+                 <label>Provincia</label>
+                <select id="regiones" name="regiones" class="form-control">
+                    <option value="0">Elija una provincia</option>
+                <option value="azuay.txt">Azuay</option>
+                <option value="bolivar.txt">Bolívar</option>
+                <option value="canar.txt">Cañar</option>
+                <option value="carchi.txt">Carchi</option>
+                <option value="chimborazo.txt">Chimborazo</option>
+                <option value="cotopaxi.txt">Cotopaxi</option>
+                <option value="eloro.txt">El Oro</option>
+                <option value="esmeraldas.txt">Esmeraldas</option>
+                <option value="galapagos.txt">Galápagos</option>
+                <option value="guayas.txt">Guayas</option>
+                <option value="imbabura.txt">Imbabura</option>
+                <option value="loja.txt">Loja</option>
+                <option value="losrios.txt">Los Ríos</option>
+                <option value="manabi.txt">Manabí</option>
+                <option value="morona_santiago.txt">Morona Santiago</option>
+                <option value="napo.txt">Napo</option>
+                <option value="orellana.txt">Orellana</option>
+                <option value="pastaza.txt">Pastaza</option>
+                <option value="pichincha.txt">Pichincha</option>
+                <option value="santa_elena.txt">Santa Elena</option>
+                <option value="santo_domingo.txt">Santo Domingo de los Tsáchilas</option>
+                <option value="sucumbios.txt">Sucumbíos</option>
+                <option value="tungurahua.txt">Tungurahua</option>
+                <option value="zamora_chinchipe.txt">Zamora Chinchipe</option>
+                </select>
+                
+                <label>Ciudad</label>
+                <select id="provincias" name="provincias" class="form-control">
+                  <option>Elija una Ciudad</option>
+                </select>
+                <br>
+              </form>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 
                 <div class="d-grid gap-2" style="padding-top: 5px">
 				  <button class="btn btn-primary" type="submit" id="btnGuardar">Guardar</button>
@@ -286,6 +372,53 @@
 	
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<<<<<<< HEAD
 
+=======
+<script > 
+
+
+
+
+  var regiones = document.querySelector('#regiones');
+  var provincias = document.querySelector('#provincias');
+  regiones.onchange = mandoRegiones;
+  
+  function reciboProvincias(respuesta) {
+  
+    limpiar(); 
+    
+    var lines = respuesta.split('\n');
+    for (var line = 0; line < lines.length; line++) {
+      var opt = document.createElement('option');
+      opt.innerHTML = lines[line];
+      opt.value = lines[line];
+      provincias.appendChild(opt);
+    }
+  
+  }
+  
+  function mandoRegiones() {
+    var ajax = new XMLHttpRequest();
+    ajax.open('GET','http://localhost:8080/Examen-Web/resources/'+ regiones.value);
+    ajax.onreadystatechange = function() {
+      console.log(ajax.status, ajax.readyState, ajax.responseText);
+      if (ajax.status === 200 && ajax.readyState === 4) {
+        reciboProvincias(ajax.responseText);
+      }
+      else
+        limpiar();
+    }
+    ajax.send();
+  }
+  
+  function limpiar(){
+  while(provincias.options.length > 0){                
+      provincias.remove(0);
+    } 
+  } 
+  
+  </script>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 </body>
 </html>

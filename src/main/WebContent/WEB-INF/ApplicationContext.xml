@@ -36,8 +36,13 @@
           destroy-method="close">
         <property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
         <property name="jdbcUrl" value="jdbc:sqlserver://localhost:1433;database=DBEventos;trustServerCertificate=True" />
+<<<<<<< HEAD
         <property name="user" value="user2" />
         <property name="password" value="123456" /> 
+=======
+        <property name="user" value="pruebas" />
+        <property name="password" value="pruebas" /> 
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 
         <!-- Propiedades connection pool para C3P0 -->
         <property name="minPoolSize" value="5" />
@@ -80,4 +85,7 @@
 	
 
 </beans>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b

@@ -113,7 +113,11 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
+<<<<<<< HEAD
       <a class="nav-link px-3" href="#">Sign out</a>
+=======
+      <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
     </div>
   </div>
 </header>
@@ -124,7 +128,11 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/">
+=======
+            <a class="nav-link" aria-current="page" href="${pageContext.request.contextPath}/dashboard">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
          	<path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -140,6 +148,7 @@
               </svg>
 			  Registro
             </a>
+<<<<<<< HEAD
           </li>  
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/registro/principal">
@@ -150,6 +159,8 @@
 			  Registro Años80
             </a>
           </li> 
+=======
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
           <li class="nav-item">
             <a class="nav-link " href="${pageContext.request.contextPath}/usuarios">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
@@ -179,7 +190,11 @@
             </a>
           </li>
           <li class="nav-item">
+<<<<<<< HEAD
             <a class="nav-link" href="#">
+=======
+            <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   			  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
 			</svg>

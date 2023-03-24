@@ -4,8 +4,15 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.StringTrimmerEditor;
+<<<<<<< HEAD
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+=======
+import org.springframework.lang.Nullable;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,7 +22,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+<<<<<<< HEAD
 
+=======
+import com.distribuida.entities.EventosDetalles;
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 import com.distribuida.entities.Usuario;
 import com.distribuida.service.UsuarioService;
 
@@ -52,6 +63,11 @@ public class UsuarioController {
 	}
 	
 	
+<<<<<<< HEAD
+=======
+	
+	
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	@PostMapping("/add")
 	public String add(@ModelAttribute("usuario") Usuario usuario, BindingResult bindingResult) {
 		if(bindingResult.hasErrors()) { 
@@ -59,14 +75,22 @@ public class UsuarioController {
 			return "agregar-usuarios";
 		} else {
 			usuarioService.add(usuario);
+<<<<<<< HEAD
 			return "redirect:/usuarios";
+=======
+			return "redirect:/usuarios/findAll";
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 		}
 	}
 	
 	@RequestMapping("/del")
 	public String frmDel(@RequestParam("idUsuario")int id) {
 		usuarioService.del(id);
+<<<<<<< HEAD
 		return "redirect:/usuarios";
+=======
+		return "redirect:/usuarios/findAll";
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	}
 	
 	@RequestMapping("/frmAdd")
@@ -75,7 +99,11 @@ public class UsuarioController {
 		model.addAttribute("usuario", usuario);
 		return "agregar-usuarios";
 	}
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 
 	@InitBinder
 		public void miBinder(WebDataBinder binder) {

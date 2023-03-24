@@ -92,7 +92,11 @@ public class EventosServiceImpl implements EventosService {
 
 	@Override
 	public void add(String nombre, Date fechaInicio, Date fechaFin, String asunto, String lugar, byte[] imagen,
+<<<<<<< HEAD
 			String imagenNombre, double promedioCalificacion,int id_ciudad) {
+=======
+			String imagenNombre, Double promedioCalificacion,int id_ciudad) {
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 		// TODO Auto-generated method stub
         Eventos eventos = new Eventos(nombre,fechaInicio,fechaFin,asunto,lugar,imagen,imagenNombre,promedioCalificacion);
        Ciudades ciudades = ciudadesDAO.findOne(id_ciudad);
@@ -105,7 +109,11 @@ public class EventosServiceImpl implements EventosService {
 
 	@Override
 
+<<<<<<< HEAD
 	public void add(double calificacion, int id_evento) {
+=======
+	public void add(Double calificacion, int id_evento) {
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 		
 		// TODO Auto-generated method stub
 		Eventos eventos= eventosDAO.findOne(id_evento);
@@ -115,6 +123,30 @@ public class EventosServiceImpl implements EventosService {
 		
 	}
 
+<<<<<<< HEAD
+=======
+	@Override
+	public double promedio(List<EventosDetalles> eventosDetalles ) {
+		// TODO Auto-generated method stub
+		
+		double promedio=0;
+		double suma=0;
+		
+		
+		for (EventosDetalles item : eventosDetalles) {
+			
+			
+           suma=suma+item.getCalificacion();
+           
+			
+			
+		} 
+		
+		promedio=suma/eventosDetalles.size();
+		return promedio;
+	}
+
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	
 
 }

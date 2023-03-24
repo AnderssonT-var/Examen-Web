@@ -22,12 +22,19 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 	private SessionFactory sessionFactory; 
 	
 	@Override
+<<<<<<< HEAD
 	@Transactional
 	public List<Usuario> findAll() {
 		// TODO Auto-generated method stub
 		Session session= sessionFactory.getCurrentSession();
 		List<Usuario> usuarios= session.createQuery("select us from Usuario us", Usuario.class).getResultList();
 		return usuarios;
+=======
+	public List<Usuario> findAll() {
+		// TODO Auto-generated method stub
+		Session session= sessionFactory.getCurrentSession();
+		return  session.createQuery("select us from Usuario us", Usuario.class).getResultList();
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	}
 
 	@Override
@@ -66,11 +73,16 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 		session.delete(usuario);
 	}
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	@Override
 	@Transactional
 	public List<Usuario> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		Session session= sessionFactory.getCurrentSession();
+<<<<<<< HEAD
 		Query query = session.createQuery(
 			"Select US "
 				+" from Usuarios US"
@@ -124,5 +136,24 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 	}
 
 	
+=======
+		Query <Usuario> query = session.createQuery(
+			" Select us "
+				+" from Usuario us "
+				+" where us.nombre1 LIKE : busqueda "
+				+" or us.nombre2 LIKE : busqueda "
+				+" or us.apellido1 LIKE : busqueda "
+				+" or us.apellido2 LIKE : busqueda "
+				+" or us.sexo LIKE : busqueda "
+				+" or us.direccion LIKE : busqueda "
+				+" or us.telefono LIKE : busqueda "
+				+" or us.correo LIKE : busqueda "
+				+" or us.tipo LIKE : busqueda "
+				, Usuario.class);
+				
+		query.setParameter("busqueda","%" +busqueda+"%");	
+		return query.getResultList();
+	}
+>>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	
 }
