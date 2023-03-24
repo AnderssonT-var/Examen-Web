@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h1 align="center"><strong>Proyecto final 4to Matutino</strong></h1>
 <h3 align="center">Proyecto de registro y gestión de eventos</h3>
 
@@ -11,7 +10,6 @@
 
 <h3 align="left"><strong>Integrantes Nocturno: </strong></h3> <p>Rolf Cruz, Fernando Castro, Mauro Farinago.</p>
 
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 <h3 align="left"><strong>Docente: </strong>Ing.: Diego Maiquez</h3>
 <p align="left">
 </p>
