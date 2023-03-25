@@ -25,7 +25,6 @@ public class CiudadesServiceImpl implements CiudadesService {
 	
 	@Autowired
 	private ProvinciasDAO provinciasDAO;
-	@Override
 	@Transactional
 	public List<Ciudades> findAll() {
 		// TODO Auto-generated method stub
@@ -64,7 +63,6 @@ public class CiudadesServiceImpl implements CiudadesService {
 
 	}
 
-	@Override
 	@Transactional
 	public List<Ciudades> findAll(String busqueda) {
 		// TODO Auto-generated method stub

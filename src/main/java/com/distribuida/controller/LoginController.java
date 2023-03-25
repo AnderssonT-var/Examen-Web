@@ -4,10 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.validation.Valid;
-<<<<<<< HEAD
+
 import javax.websocket.server.PathParam;
-=======
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,12 +40,10 @@ public class LoginController {
 		
 		Logins login = loginsService.validar(usuario, contrasena);
 		model.addAttribute("usuario", login.getUsuario1());
-<<<<<<< HEAD
 		return "dasboard";
 		
 	}
 
-=======
 		return "redirect:/dashboard";
 		
 	}
@@ -65,6 +61,6 @@ public class LoginController {
 		
 		return "mi-cuenta";
 		}
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
-}
+	}
+
              

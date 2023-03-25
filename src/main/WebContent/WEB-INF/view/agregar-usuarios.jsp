@@ -83,9 +83,10 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap-table.min.css" />	
 		
 	<!-- JavaScript -->
-	<script src="${pageContext.request.contextPath}/resources/js/alertify.min.js"></script>
 	
+	<script src="${pageContext.request.contextPath}/resources/js/alertify.min.js"></script>
 	<!-- CSS -->
+	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/agregar-usuarios.css"/>
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/alertify.min.css"/>
 	<!-- Default theme -->
 	<link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/themes/default.min.css"/>
@@ -96,7 +97,7 @@
 
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+	
 </head>
 <body>
 <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
@@ -107,11 +108,7 @@
   
   <div class="navbar-nav">
     <div class="nav-item text-nowrap">
-<<<<<<< HEAD
-      <a class="nav-link px-3" href="#">Sign out</a>
-=======
       <a class="nav-link px-3" href="${pageContext.request.contextPath}/">Sign out</a>
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
     </div>
   </div>
 </header>
@@ -122,11 +119,7 @@
       <div class="position-sticky pt-3 sidebar-sticky">
         <ul class="nav flex-column">
           <li class="nav-item">
-<<<<<<< HEAD
-            <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/">
-=======
             <a class="nav-link " aria-current="page" href="${pageContext.request.contextPath}/dashboard">
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home align-text-bottom" aria-hidden="true">
             <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
             <polyline points="9 22 9 12 15 12 15 22"></polyline>
@@ -142,23 +135,8 @@
               </svg>
 			  Registro
             </a>
-<<<<<<< HEAD
-          </li>  
-          <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/registro/principal">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file align-text-bottom" aria-hidden="true">
-              <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path>
-              <polyline points="13 2 13 9 20 9"></polyline>
-              </svg>
-			  Registro Años80
-            </a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="${pageContext.request.contextPath}/usuarios/findAll">
-=======
           <li class="nav-item">
             <a class="nav-link" href="${pageContext.request.contextPath}/usuarios">
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users align-text-bottom" aria-hidden="true">
               <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
               <circle cx="9" cy="7" r="4"></circle>
@@ -169,11 +147,7 @@
             </a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-            <a class="nav-link" href="#">
-=======
             <a class="nav-link"  href="${pageContext.request.contextPath}/eventos">
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-airplay align-text-bottom" aria-hidden="true">
               <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
               <polygon points="12 15 17 21 7 21 12 15"></polygon>
@@ -182,11 +156,7 @@
             </a>
           </li>
           <li class="nav-item">
-<<<<<<< HEAD
-            <a class="nav-link" href="#">
-=======
             <a class="nav-link" href="${pageContext.request.contextPath}/mi-cuenta">
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
   			  <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4Zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10Z"/>
 			</svg>
@@ -218,30 +188,26 @@
       </div>
     </nav>
 
-<<<<<<< HEAD
-=======
- 
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
 <h1>Registro de Usuarios</h1>
-<div class="table-responsive">
+<div class="table-responsive">     
 <form:form action="add" modelAttribute="usuario" method="POST">
 		
 		<form:hidden path="idUsuario"/> 
-		 <label >Cedula                 
-<<<<<<< HEAD
-                  	<form:input path="cedula" type="number" id="cedula" name="cedula" formControlName="cedula" class="form-control" maxlength="20" />                                                    
-=======
-                  	<form:input path="cedula" type="number" id="cedula" name="cedula" formControlName="cedula" class="form-control"  maxlength="20" required="required"/>                                                    
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
-                </div>                                
-		
+		<div class="form-group">
+  <label for="cedula">Cédula</label>
+  <div class="input-container">
+    <form:input path="cedula" type="number" id="cedula" name="cedula" formControlName="cedula" class="form-control" maxlength="20" style="width: 200px;"/> 
+    <form:errors path="cedula" cssClass="error-message" />
+  </div>
+</div>                                       
+</div>                                           
+		        
 		<!--   Cedula
 		<form:input path="cedula" type="number" id="cedula" name="cedula" formControlName="cedula" maxLength="10"/>
 		-->
 		<br>
 		<label>Nombre1 
-<<<<<<< HEAD
 		<form:input path="nombre1" type="text" id="nombre1" name="nombre1" formControlName="nombre1" class="form-control" maxLength="15" />
 		<br>
 		<label>Nombre2 
@@ -261,27 +227,6 @@
 		<br>
 	
 		<label> Sexo <form:errors path="sexo" style="color:red" /></label>  <%-- <form:errors path="" style="color:red" /> --%>
-=======
-		<form:input path="nombre1" type="text" id="nombre1" name="nombre1" formControlName="nombre1" class="form-control" minlength="3" maxLength="15" required="required"/>
-		<br>
-		<label>Nombre2 
-		<form:input path="nombre2" type="text" id="nombre2" name="nombre2" formControlName="nombre2" class="form-control" minlength="3" maxLength="15" required="required"/>
-		<br>
-		<label>Apellido1
-		<form:input path="apellido1" type="text" id="apellido1" name="apellido1" formControlName="apellido1" class="form-control"  minlength="3" maxLength="15" required="required"/>
-		<br>
-		<label>Apellido2
-		<form:input path="apellido2" type="text" id="apellido2" name="apellido2" formControlName="apellido2"  class="form-control"  minlength="3" maxLength="15" required="required"/>
-		<br>
-		<label>Fecha de Nacimiento
-		<form:input path="fechaNacimiento" type="date" id="fechaNacimiento" name="fechaNacimiento"  class="form-control" required="required" />
-		<br>
-		<label>Edad
-		<form:input path="edad" type="number" id="edad" name="edad"  class="form-control" maxLength="15" required="required"/>
-		<br>
-	
-		<label> Sexo <form:errors path="sexo" style="color:red" /></label> 
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	                 <div class="form-group">
 		                
 		                 <div class="form-check form-check-inline">		                  		                                
@@ -295,28 +240,18 @@
 						 </div>
 						 <br>
 		<label>Direccion
-<<<<<<< HEAD
 		<form:input path="direccion" type="text" id="direccion" name="direccion"  class="form-control" maxLength="40" />
 		<br>
 		<label>Telefono
 		<form:input path="telefono" type="number" id="telefono" name="telefono"  class="form-control" maxLength="20" />
 		<br>
 		<label>Correo
+		
 		<form:input path="correo" type="email" id="correo" name="correo"  class="form-control" maxLength="40" />
-=======
-		<form:input path="direccion" type="text" id="direccion" name="direccion"  class="form-control"  minlength="3" maxLength="40" required="required"/>
+		<form:errors path="correo" cssClass="error-message" />
 		<br>
-		<label>Telefono
-		<form:input path="telefono" type="number" id="telefono" name="telefono"  class="form-control"   maxLength="20" required="required"/>
-		<br>
-		<label>Correo
-		<form:input path="correo" type="email" id="correo" name="correo"  class="form-control" maxLength="40" required="required"/>
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
-		<br>
-		<br>
-
-		
-		
+		<form:errors path="nombre1" cssClass="error-message" />
+	    <br>
 		
 		
 		
@@ -324,17 +259,14 @@
 		
 		
 		</div>
-		
-		<button type="submit" id="btnGuardar" class="btn btn-primary">Guardar </button>
+	
+		<button type="submit" id="btnGuardar" class="btn btn-primary" disabled>Guardar </button>
 		<button type="button" id="btnCancelar" class="btn btn-danger" onClick="window.location.href='/Examen-Web/usuarios/findAll'; return false;">Cancelar </button>
 	</form:form>
-	
+	<script src="${pageContext.request.contextPath}/resources/js/agregar.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
 
 </body>
-<<<<<<< HEAD
+
 </html>
-=======
-</html>
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b

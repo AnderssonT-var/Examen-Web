@@ -7,15 +7,13 @@ import com.distribuida.entities.Regiones;
 public interface RegionesService {
 
 
-<<<<<<< HEAD
-	public List<Regiones> findAll();
-=======
+
+
 	public static List<Regiones> findAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
-	
+
 	public Regiones findOne(int id);
 	
 	public void add(Regiones regiones);

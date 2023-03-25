@@ -6,15 +6,12 @@ import com.distribuida.entities.Provincias;
 
 public interface ProvinciasService {
 
-	
-<<<<<<< HEAD
-public List<Provincias> findAll();
-=======
+
+
 public static List<Provincias> findAll() {
 	// TODO Auto-generated method stub
 	return null;
 }
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	
 	public Provincias findOne(int id);
 		
