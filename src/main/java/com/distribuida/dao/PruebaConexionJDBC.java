@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 public class PruebaConexionJDBC {
 
 	public static void main(String[] args) {
-		String jdbcURL="jdbc:sqlserver://localhost:1433;database=DBEventos;trustServerCertificate=True";
+		String jdbcURL="jdbc:sqlserver://localhost:1433;database=DBEventoss;trustServerCertificate=True";
         String user="user";
         String password="1234";
 

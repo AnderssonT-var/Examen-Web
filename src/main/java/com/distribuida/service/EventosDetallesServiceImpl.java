@@ -20,12 +20,6 @@ import com.distribuida.entities.Usuario;
 @Service
 public class EventosDetallesServiceImpl implements EventosDetallesService {
 
-	
-<<<<<<< HEAD
-	
-=======
-
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	@Autowired
 	private EventosDetallesDAO eventosDetallesDAO;
 	
@@ -114,11 +108,8 @@ public class EventosDetallesServiceImpl implements EventosDetallesService {
 		// TODO Auto-generated method stub
 		return eventosDetallesDAO.findOne(eventosDetalles);
 	}
-
-<<<<<<< HEAD
 	
 
-=======
 	@Override
 	public List<EventosDetalles> findAll(int idEvento) {
 		// TODO Auto-generated method stub
@@ -129,9 +120,9 @@ public class EventosDetallesServiceImpl implements EventosDetallesService {
 	@Override
 	public List<EventosDetalles> findAll1(int idUsuario) {
 		// TODO Auto-generated method stub
-		
-		return eventosDetallesDAO.findAll1(idUsuario);
+		return null;
 	}
+
 	
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
+
 }

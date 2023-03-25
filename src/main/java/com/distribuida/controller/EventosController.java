@@ -27,10 +27,7 @@ public class EventosController {
 	private EventosService eventosService;
 	
 	
-<<<<<<< HEAD
-=======
-	
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
+
 	@RequestMapping
 	public String findAll(Model model) {
 	List<Eventos> eventos = eventosService.findAll();
@@ -89,8 +86,7 @@ public class EventosController {
 		StringTrimmerEditor trimmerEditor = new StringTrimmerEditor(true);
 		binder.registerCustomEditor(String.class, trimmerEditor);  
 	}
-<<<<<<< HEAD
+
 }
-=======
 }
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
+

@@ -109,7 +109,7 @@ public class EventosDetallesDAOImpl implements EventosDetallesDAO {
 
 
 
-<<<<<<< HEAD
+
 
 	@Override
 	@Transactional
@@ -123,7 +123,7 @@ public class EventosDetallesDAOImpl implements EventosDetallesDAO {
 		eventosDAO.add(eventos);
 	}
 	
-=======
+
 //
 //	@Override
 //	@Transactional
@@ -192,6 +192,6 @@ public class EventosDetallesDAOImpl implements EventosDetallesDAO {
 //		return query.getResultList();
 //
 //	}
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
+
 
 }

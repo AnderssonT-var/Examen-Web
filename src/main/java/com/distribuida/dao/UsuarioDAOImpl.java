@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+
 import com.distribuida.entities.Usuario;
 
 @Repository
@@ -22,19 +23,11 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 	private SessionFactory sessionFactory; 
 	
 	@Override
-<<<<<<< HEAD
-	@Transactional
 	public List<Usuario> findAll() {
 		// TODO Auto-generated method stub
 		Session session= sessionFactory.getCurrentSession();
 		List<Usuario> usuarios= session.createQuery("select us from Usuario us", Usuario.class).getResultList();
 		return usuarios;
-=======
-	public List<Usuario> findAll() {
-		// TODO Auto-generated method stub
-		Session session= sessionFactory.getCurrentSession();
-		return  session.createQuery("select us from Usuario us", Usuario.class).getResultList();
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	}
 
 	@Override
@@ -45,6 +38,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 		Query query= session.createQuery("select us from Usuario us where idUsuario = : keyID",Usuario.class);
 		return session.get(Usuario.class, id);
 	}
+
 
 	@Override
 	@Transactional
@@ -73,16 +67,11 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 		session.delete(usuario);
 	}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
 	@Override
 	@Transactional
 	public List<Usuario> findAll(String busqueda) {
 		// TODO Auto-generated method stub
 		Session session= sessionFactory.getCurrentSession();
-<<<<<<< HEAD
 		Query query = session.createQuery(
 			"Select US "
 				+" from Usuarios US"
@@ -91,7 +80,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 				+" or US.nombre2 LIKE : keyBusqueda "
 				+" or US.apellido1 LIKE : keyBusqueda "
 				+" or US.apellido2 LIKE : keyBusqueda "
-				+" or US.fechaNacimiento LIKE : keyBusqueda "
+				+" or US.fechanacimiento LIKE : keyBusqueda "
 				+" or US.edad LIKE : keyBusqueda "
 				+" or US.sexo LIKE : keyBusqueda "
 				+" or US.direccion LIKE : keyBusqueda "
@@ -103,57 +92,4 @@ public class UsuarioDAOImpl implements UsuarioDAO{
 		query.setParameter("keybusqueda","%" +busqueda+"%");	
 		return query.getResultList();
 	}
-
-	@Override
-	@Transactional
-	public Usuario findOne(Usuario usuario) {
-		// TODO Auto-generated method stub
-		Session session = sessionFactory.getCurrentSession();
-		
-		Query<Usuario> query = session.createQuery("select usr"
-			+" from Usuario usr"
-			+" where 1=1"
-			+" and usr.nombre1 = : nombre1"
-			+" and usr.nombre2 = : nombre2"
-			+" and usr.apellido1 = : apellido1"
-			+" and usr.apellido2 = : apellido2"
-			+" and usr.fechaNacimiento = : fechaNacimiento"
-			+" and usr.sexo = : sexo"
-			+" and usr.correo = : correo"
-			+" and usr.tipo = : tipo"	
-		, Usuario.class);
-		
-		query.setParameter("nombre1", usuario.getNombre1());
-		query.setParameter("nombre2", usuario.getNombre2());
-		query.setParameter("apellido1", usuario.getApellido1());
-		query.setParameter("apellido2", usuario.getApellido2());
-		query.setParameter("fechaNacimiento", usuario.getFechaNacimiento());
-		query.setParameter("sexo", usuario.getSexo());
-		query.setParameter("correo", usuario.getCorreo());
-		query.setParameter("tipo", usuario.getTipo());
-
-		return query.getSingleResult();
-	}
-
-	
-=======
-		Query <Usuario> query = session.createQuery(
-			" Select us "
-				+" from Usuario us "
-				+" where us.nombre1 LIKE : busqueda "
-				+" or us.nombre2 LIKE : busqueda "
-				+" or us.apellido1 LIKE : busqueda "
-				+" or us.apellido2 LIKE : busqueda "
-				+" or us.sexo LIKE : busqueda "
-				+" or us.direccion LIKE : busqueda "
-				+" or us.telefono LIKE : busqueda "
-				+" or us.correo LIKE : busqueda "
-				+" or us.tipo LIKE : busqueda "
-				, Usuario.class);
-				
-		query.setParameter("busqueda","%" +busqueda+"%");	
-		return query.getResultList();
-	}
->>>>>>> 23f67a3ed18ccd1bb3d6a0943ce5d38fcee5733b
-	
 }

@@ -23,7 +23,6 @@ public class RegionesServiceImpl implements RegionesService {
 	
 	@Autowired
 	private RegionesDAO regionesDAO;
-	@Override
 	public List<Regiones> findAll() {
 		// TODO Auto-generated method stub
 		return regionesDAO.findAll();
